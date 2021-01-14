@@ -6,7 +6,6 @@
 
 This codebase was created to demonstrate a fully fledged fullstack application built with Spring boot + Mybatis including CRUD operations, authentication, routing, pagination, and more.
 
-
 # How it works
 
 The application uses Spring boot (Web, Mybatis).
