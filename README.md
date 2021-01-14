@@ -1,12 +1,11 @@
-# ![RealWorld Example App using Kotlin and Spring](example-logo.png)
+### Web design backend app
 
-[![Actions](https://github.com/gothinkster/spring-boot-realworld-example-app/workflows/Java%20CI/badge.svg)](https://github.com/gothinkster/spring-boot-realworld-example-app/actions)
+[![Actions](https://travis-ci.com/samirovsky/webdesign-backend.svg?token=6k7UnkLvsP3196YX8oWX&branch=main)](https://travis-ci.com/samirovsky/webdesign-backend)
 
-> ### Spring boot + MyBatis codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld-example-apps) spec and API.
+> ### Spring boot + MyBatis codebase containing real world examples (CRUD, auth, advanced patterns, etc).
 
 This codebase was created to demonstrate a fully fledged fullstack application built with Spring boot + Mybatis including CRUD operations, authentication, routing, pagination, and more.
 
-For more information on how to this works with other frontends/backends, head over to the [RealWorld](https://github.com/gothinkster/realworld) repo.
 
 # How it works
 
@@ -50,16 +49,8 @@ You need Docker installed.
 	
 	docker-compose up -d
 
-# Try it out with a RealWorld frontend
-
-The entry point address of the backend API is at http://localhost:8080, **not** http://localhost:8080/api as some of the frontend documentation suggests.
-
 # Run test
 
 The repository contains a lot of test cases to cover both api test and repository test.
 
     ./gradlew test
-
-# Help
-
-Please fork and PR to improve the code.

@@ -5,3 +5,7 @@ notifications:
 
 jdk:
   - openjdk8
+
+branches:
+  only:
+    - main
