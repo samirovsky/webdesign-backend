@@ -13,13 +13,13 @@ public interface ArticleReadService {
 
     ArticleData findBySlug(@Param("slug") String slug);
 
-    List<String> queryArticles(@Param("tag") String tag, @Param("author") String author, @Param("favoritedBy") String favoritedBy, @Param("page") Page page);
+    List<String> queryArticles(@Param("tag") String tag, @Param("author") String author, @Param("favoritedBy") String favoritedBy, @Param("pageLimit") int pageLimit, @Param("pageOffset") int pageOffset);
 
     int countArticle(@Param("tag") String tag, @Param("author") String author, @Param("favoritedBy") String favoritedBy);
 
     List<ArticleData> findArticles(@Param("articleIds") List<String> articleIds);
 
-    List<ArticleData> findArticlesOfAuthors(@Param("authors") List<String> authors, @Param("page") Page page);
+    List<ArticleData> findArticlesOfAuthors(@Param("authors") List<String> authors, @Param("pageLimit") int pageLimit, @Param("pageOffset") int pageOffset);
 
     int countFeedSize(@Param("authors") List<String> authors);
 }

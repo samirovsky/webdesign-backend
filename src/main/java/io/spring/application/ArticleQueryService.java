@@ -59,7 +59,7 @@ public class ArticleQueryService {
     }
 
     public ArticleDataList findRecentArticles(String tag, String author, String favoritedBy, Page page, User currentUser) {
-        List<String> articleIds = articleReadService.queryArticles(tag, author, favoritedBy, page);
+        List<String> articleIds = articleReadService.queryArticles(tag, author, favoritedBy, page.getLimit(), page.getOffset());
         int articleCount = articleReadService.countArticle(tag, author, favoritedBy);
         if (articleIds.size() == 0) {
             return new ArticleDataList(new ArrayList<>(), articleCount);
@@ -122,7 +122,7 @@ public class ArticleQueryService {
         if (followdUsers.size() == 0) {
             return new ArticleDataList(new ArrayList<>(), 0);
         } else {
-            List<ArticleData> articles = articleReadService.findArticlesOfAuthors(followdUsers, page);
+            List<ArticleData> articles = articleReadService.findArticlesOfAuthors(followdUsers, page.getLimit(), page.getOffset());
             fillExtraInfo(articles, user);
             int count = articleReadService.countFeedSize(followdUsers);
             return new ArticleDataList(articles, count);
